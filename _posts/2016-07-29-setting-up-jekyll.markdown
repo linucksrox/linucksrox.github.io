@@ -3,6 +3,7 @@ layout: post
 title:  "How To Get Going With Jekyll and GitHub Pages"
 date:   2016-07-29 16:55:43 -0400
 categories: jekyll install
+comments: true
 ---
 I'm running [Xubuntu 16.04][xubuntu]. This method should be the same/similar in any Debian/Ubuntu distro. These are the steps I followed to get this thing working, using the terminal. Note the Jekyll version, right now the latest version doesn't work with GitHub pages so I had to use a slightly older version (see the [GitHub dependency versions][github-pages-versions] page):
 {% highlight bash %}
@@ -47,6 +48,31 @@ http://whatever-your-username-is.github.io
 {% endhighlight %}
 
 Start blogging!
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//blog-dalydays-com.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
 
 [xubuntu]: http://xubuntu.org/
 [github-pages-versions]: https://pages.github.com/versions/
