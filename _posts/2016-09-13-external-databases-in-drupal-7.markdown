@@ -15,6 +15,7 @@ Add The Database
 
 In **settings.php**, add the database credentials for the external database you'll be connecting to, something like this:
 {% highlight php %}
+<?php
  $databases = array (
    'default' =>
    array (
@@ -50,7 +51,7 @@ Write A Module
 --------------
 
 Write a custom module which connects to the database, does whatever it needs to, then reconnects to Drupal's database when it's done. In my case, I'm writing a simple module that will utilize [hook_form_alter][hookformalter]. Here's what mymodule.info looks like:
-{% highlight php %}
+{% highlight conf %}
 name = Prefill Webforms
 description = whatever you want here
 core = 7.x
@@ -119,7 +120,7 @@ function prefill_webforms_submit_handler($form, &$form_state) {
   $submitted_client_id = $form_state['input']['submitted']['client_id'];
 
   // select the maveric database defined in settings.php
-  db_set_active('mycustomdatabase');
+  db_set_active('myexternaldatabase');
   // fetch the query using the submitted client ID
   $result = db_query("SELECT t.name, t.website FROM tablename t WHERE client_id = :client_id", arrary('client_id'=>$submitted_client_id));
   // set database connection back to default
