@@ -5,6 +5,8 @@ date:   2016-08-29 06:55:43 -0400
 categories: android development
 comments: true
 ---
+{% include ganalytics.html %}
+
 Lately I've been learning to develop for Android using [Udacity][udacity]{:target="_blank"}. There are a lot of other good resources available, but Udacity seems promising because the Android courses were developed by Google and Udacity.
 
 I wouldn't consider myself a beginner in programming, but I also don't have a ton of work experience (maybe more than I realize though). I do some limited JavaScript at work to manipulate [BIRT][birt]{:target="_blank"} reports. I also wrote a company portal site using PHP which authenticates against our Active Directory server to log in. I excelled in C and C++ when I was learning that 10+ years ago by reading books and visiting the [CProgramming][cprogramming]{:target="_blank"} forums. In particular, [C Primer Plus][cprimerplusbook]{:target="_blank"}, and heck yes, I have the first edition. I found it for $1 at a Goodwill, and it is one of the best programming books I've read.

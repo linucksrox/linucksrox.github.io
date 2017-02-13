@@ -5,6 +5,8 @@ date:   2016-07-29 16:55:43 -0400
 categories: jekyll install
 comments: true
 ---
+{% include ganalytics.html %}
+
 I'm running [Xubuntu 16.04][xubuntu]. This method should be the same/similar in any Debian/Ubuntu distro. These are the steps I followed to get this thing working, using the terminal:
 {% highlight bash %}
 sudo apt install ruby ruby-dev ri bundler build-essential git

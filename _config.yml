@@ -24,3 +24,6 @@ github_username:  linucksrox
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Google services
+google_analytics: UA-91840272-1
