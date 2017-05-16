@@ -193,7 +193,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  jekyll (= 3.2.1)
+  minima
 
 BUNDLED WITH
-   1.14.6
+   1.11.2

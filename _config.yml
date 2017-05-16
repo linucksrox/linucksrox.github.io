@@ -26,10 +26,11 @@ markdown: kramdown
 
 # Google services
 google_analytics: UA-91840272-1
-theme: jekyll-theme-slate
+theme: minima
 
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+theme: minima
