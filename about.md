@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: home
 title: About
 permalink: /about/
 ---
 
-This is the about page. I need to add more information here, but let's just leave it as is for now...
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
