@@ -23,7 +23,7 @@ github_username:  linucksrox
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hacker
 
 # Google services
 google_analytics: UA-91840272-1
+theme: minima
