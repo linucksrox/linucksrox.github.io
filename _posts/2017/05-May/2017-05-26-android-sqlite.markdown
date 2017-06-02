@@ -18,7 +18,7 @@ If you know a little bit about writing queries, the SQLite part should be pretty
 
 If you're starting out with a new app, you'll need to insert a new class and call it something like databaseNameContract, or in my case ProductContract. Here's an example from a sample database app I made:
 
-{% highlight java %}
+```java
 public final class ProductContract {
     // private constructor prevents accidental instantiation of the contract class
     private ProductContract() {}
@@ -29,12 +29,12 @@ public final class ProductContract {
         public static final String COLUMN_NAME_NAME = "name";
     }
 }
-{% endhighlight %}
+```
 
 <br>
 So now that we have the simplest schema in the world (and pretty useless), we can move on to the next thing: SQLiteOpenHelper. Apparently we need some help opening SQLite, so it's time to insert another class. This one will be called ProductHelper and it extends SQLiteOpenHelper. The point of all this is to keep track of the database version, and manage database creation and updates. It will come in especially handy several app versions later when the database structure changes.
 
-{% highlight java %}
+```java
 public class ProductHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "products.db";
@@ -56,7 +56,7 @@ public class ProductHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 }
-{% endhighlight %}
+```
 
 <br>
 Dang, this is starting to look like a lot of stuff but it seems like there's no end in sight. There is an end, we just can't see it yet. Just a couple more things and we'll have a legit working (but barely) database app.
