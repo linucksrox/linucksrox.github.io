@@ -14,7 +14,7 @@ Add The Database
 ----------------
 
 In **settings.php**, add the database credentials for the external database you'll be connecting to, something like this:
-{% highlight php %}
+```php
 <?php
  $databases = array (
    'default' =>
@@ -45,22 +45,22 @@ In **settings.php**, add the database credentials for the external database you'
      ),
    ),
  );
-{% endhighlight %}
+```
 
 Write A Module
 --------------
 
 Write a custom module which connects to the database, does whatever it needs to, then reconnects to Drupal's database when it's done. In my case, I'm writing a simple module that will utilize [hook_form_alter][hookformalter]. Here's what mymodule.info looks like:
-{% highlight conf %}
+```conf
 name = Prefill Webforms
 description = whatever you want here
 core = 7.x
 dependencies[] = webform
-{% endhighlight %}
+```
 
 And here's what mymodule.module looks like (so far):
 
-{% highlight php %}
+```php
 <?php
 
 /**
@@ -134,7 +134,7 @@ function prefill_webforms_submit_handler($form, &$form_state) {
   //dpm($form);
   //dpm($form_state);
 }
-{% endhighlight %}
+```
 
 <br />
 <br />
