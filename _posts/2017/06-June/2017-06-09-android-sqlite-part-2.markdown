@@ -10,7 +10,7 @@ Here's my thought of the day: I recently helped out on a public forum for some c
 <br>
 I don't say this as an insult to the guy. I appreciate that people ask for help, and are willing to learn (and polite!). There's nothing wrong with that. Maybe he's just getting started, but this is what he wants to become an expert in, so he's in the mindset that he **is** an expert so that he **becomes** an expert.
 <br>
-I guess the point is that my first reaction was "This guy is over-selling himself." But maybe part of the reason I think that is because I under-sell myself. Hm... just a thought. Time to go update my resume:
+I guess the point is that my first reaction was "This guy is over-selling himself." But maybe part of the reason I think that is because I under-sell myself. Hm... just a thought. There still needs to be a balance though... I mean come on. I guess since I've created my first Hello World app, it's time to go update my resume:
 > Android Master
 
 <br>
