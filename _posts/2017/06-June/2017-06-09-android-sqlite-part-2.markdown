@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'SQLite, Content Providers, Cursor Adapters, and Cursor Loaders in Android - Part 2'
+title: 'Databases In Android - Part 2'
 date: '2017-06-09 07:30'
 categories: android development
 comments: true
