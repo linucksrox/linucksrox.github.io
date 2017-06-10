@@ -23,6 +23,7 @@ CursorAdapters
 
 The next point on the list is the CursorAdapter. I don't think I can explain it any better than the Android documentation:
 > Adapter that exposes data from a Cursor to a ListView widget.
+But it doesn't hurt to try. The CursorAdapter maps the values from a cursor to the fields in a ListView.
 
 <br>
 Before you make the CursorAdapter, you need to know which fields you want to display in your layout. Here's what my list_item.xml looks like. This layout gets loaded inside of another layout's ListView, but that's another topic I don't want to get into right now.
