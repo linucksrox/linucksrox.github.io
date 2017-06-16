@@ -6,12 +6,15 @@ categories: android development
 comments: true
 ---
 
-Before I get into ContentProviders, I just want to mention how difficult it is to blog consistently. I mean, it's not too bad. You just have to commit to a schedule and stick with it. You just have to be motivated to write instead of work on your app that is probably way more interesting to work on. It's not a complaint though, more of a rant. There's just not much time available to work on side projects when you have a full time job and family to spend time with (assuming you don't work for Apple). That's not me. It's the other way around:
-> I rarely get to work on my app. That's a risk you have to take.
+Before I get into ContentProviders, I just want to mention how difficult it is to blog consistently. I mean, it's not too bad. You just have to commit to a schedule and stick with it. You just have to be motivated to write instead of work on your app that is probably way more interesting to work on. It's not a complaint though, more of a rant. There's just not much time available to work on side projects when you have a full time job and family to spend time with, assuming you don't work for Apple.
 
 <br>
 ![](/assets/images/apple-rarely-get-to-see-my-kids.jpg)
 <br>
+<br>
+That's not me. It's the other way around:
+> I have to limit how much I work, or I risk not seeing my kids.
+
 <br>
 
 ContentProviders
