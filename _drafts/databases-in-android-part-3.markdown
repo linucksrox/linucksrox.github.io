@@ -11,6 +11,8 @@ Before I get into ContentProviders, I just want to mention how difficult it is t
 
 <br>
 ![](/assets/images/apple-rarely-get-to-see-my-kids.jpg)
+<br>
+<br>
 
 ContentProviders
 ----------------
