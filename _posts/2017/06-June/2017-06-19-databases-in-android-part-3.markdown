@@ -26,6 +26,8 @@ ContentProviders
 <br>
 Well I ran out of time today, so I'll add to this next time.
 
+[Continue to part 4...](/android/development/2017/06/23/databases-in-android-part-4.html)
+
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
@@ -41,9 +43,9 @@ Well I ran out of time today, so I'll add to this next time.
     */
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        
+
         s.src = '//blog-dalydays-com.disqus.com/embed.js';
-        
+
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
