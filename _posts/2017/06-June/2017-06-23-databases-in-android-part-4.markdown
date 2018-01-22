@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: single
 title: Databases In Android - Part 4
 date: '2017-06-23 07:26'
-categories: android development
+categories: android
 comments: true
 ---
 
@@ -133,29 +133,3 @@ Focusing on the query method first, it basically opens a readable copy of the da
 I'm tempted to say that the rest of the code is self explanatory... Even if that's not true, you can use this as a starting point and fill things in from there. This is pretty barebones as it is.
 
 Next time we'll look at CursorLoader, and that should conclude the Databases In Android series.
-
-
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-
-        s.src = '//blog-dalydays-com.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}

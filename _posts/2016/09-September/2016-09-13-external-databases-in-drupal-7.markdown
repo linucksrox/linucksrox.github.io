@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: single
 title:  "Connecting to External Databases In Drupal 7"
 date:   2016-09-13 07:10:00 -0400
-categories: drupal development
+categories: drupal
 comments: true
 ---
 
@@ -50,7 +50,7 @@ In **settings.php**, add the database credentials for the external database you'
 Write A Module
 --------------
 
-Write a custom module which connects to the database, does whatever it needs to, then reconnects to Drupal's database when it's done. In my case, I'm writing a simple module that will utilize [hook_form_alter][hookformalter]. Here's what mymodule.info looks like:
+Write a custom module which connects to the database, does whatever it needs to, then reconnects to Drupal's database when it's done. In my case, I'm writing a simple module that will utilize [hook_form_alter][hookformalter]{:target="_ blank"}. Here's what mymodule.info looks like:
 ```conf
 name = Prefill Webforms
 description = whatever you want here
@@ -135,32 +135,5 @@ function prefill_webforms_submit_handler($form, &$form_state) {
   //dpm($form_state);
 }
 ```
-
-<br />
-<br />
-{% if page.comments %}
-<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = '//blog-dalydays-com.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}
 
 [hookformalter]: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_form_alter/7.x
