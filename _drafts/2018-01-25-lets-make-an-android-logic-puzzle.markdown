@@ -21,7 +21,7 @@ categories: android letsmake
 ![](/assets/images/letsmakeandroidlogicpuzzle5.png)
 - Wait while android builds the project.  
 ![](/assets/images/letsmakeandroidlogicpuzzle6.png)
-- Expand app/java/com.domain.appname and res/layout to find the MainActivity.java and activity_main.xml files to get started.
+- Expand app/java/com.domain.appname and app/res/layout to find the MainActivity.java and activity_main.xml files to get started.
 ![](/assets/images/letsmakeandroidlogicpuzzle7.png)
 
 ## 2. Create a layout
