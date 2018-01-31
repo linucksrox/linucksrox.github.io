@@ -9,6 +9,8 @@ I've always enjoyed the classic game Lights Out by Tiger Electronics. It's a fai
 
 Ok, maybe I'm one of only 4 people who think this is cool, but either way it's a good starter project, so let's make it for Android!
 
+The end goal here is to demonstrate how to create a simple game from scratch, add some features, refactor the code, and eventually release it on the Google Play store. I'll walk through every step start to finish, so you should be able to follow along even if you're new to Android or Java.
+
 ## 1. Create a new project
 - Click Start a new Android Studio project.  
 ![](/assets/images/letsmakeandroidlogicpuzzle1.png)
