@@ -5,6 +5,7 @@ categories: android letsmake
 ---
 
 I've always enjoyed the classic game Lights Out by Tiger Electronics. It's a fairly simple idea: there is a grid of 25 buttons which can be lit or not lit. When you press a button, it just toggles the light for the button you pressed plus any adjacent buttons. So you would start with a randomized board (or predetermined pattern), and the goal is to turn off all the lights while pressing the fewest buttons possible.  
+
 ![](/assets/images/tiger-lights-out.jpg)
 
 Ok, maybe I'm one of only 4 people who think this is cool, but either way it's a good starter project, so let's make it for Android!
@@ -24,11 +25,19 @@ The end goal here is to demonstrate how to create a simple game from scratch, ad
 ![](/assets/images/letsmakeandroidlogicpuzzle3.png)
 - We just need an empty activity for now, so click Next.  
 ![](/assets/images/letsmakeandroidlogicpuzzle4.png)
-- I'll use the defaults for now. As apps get more complicated we start thinking of better names to organize everything. For now, keep the defaults and click Finish.    
+- I'll use the defaults for now. As apps get more complicated we start thinking of better names to organize everything. For now, keep the defaults and click Finish.  
 ![](/assets/images/letsmakeandroidlogicpuzzle5.png)
 - Wait while android builds the project.  
 ![](/assets/images/letsmakeandroidlogicpuzzle6.png)
-- Expand app/java/com.domain.appname and app/res/layout to find the MainActivity.java and activity_main.xml files to get started.
+- Expand app/java/com.domain.appname and app/res/layout to find the MainActivity.java and activity_main.xml files to get started.  
 ![](/assets/images/letsmakeandroidlogicpuzzle7.png)
 
 ## 2. Create a layout
+Our layout is going to be very basic at this point, because we just want to show a grid of buttons that we can start interacting with. We'll focus on tweaking the layout later on after implementing some of the functionality. I like to focus on getting things functional before worrying too much about how it looks.
+
+As you might know already, there are a bazillion ways to do layouts, and I'm just focused on showing something that's very simple for two reasons:  
+1. It should be simple to understand.  
+2. It shouldn't take too much effort to feel like you're making progress.
+
+- Open the provided layout file activity_main.xml
+(screenshot)
