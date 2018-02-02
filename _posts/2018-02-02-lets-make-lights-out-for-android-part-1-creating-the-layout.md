@@ -1,6 +1,6 @@
 ---
-title: "Let's Make Lights Out for Android"
-date: "2018-02-01"
+title: "Let's Make Lights Out for Android Part 1 - Creating the Layout"
+date: "2018-02-02"
 categories: android letsmake
 ---
 
@@ -280,3 +280,7 @@ We'll define the dimensions and colors next, so don't worry about any errors you
 
 - Back in the layout preview or layout design mode, you should now see the grid pattern.
 ![](/assets/images/button-grid.png)
+
+Congratulations! You made a button grid layout, and you can tweak the colors or dimensions however you want before continuing on to the next part where we'll hook up the logic and actually toggle the lights on and off when you press the buttons.
+
+Leave a comment if you have any questions or want me to elaborate on anything.
