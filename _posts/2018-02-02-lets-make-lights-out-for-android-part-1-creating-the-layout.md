@@ -16,19 +16,19 @@ The end goal here is to demonstrate how to create a simple game from scratch, ad
 ![](/assets/images/letsmakeandroidlogicpuzzle1.png)
 - Set up your project.  
 ![](/assets/images/letsmakeandroidlogicpuzzle2.png)
-  1. Name your app.
+  1. Name your app. I'll go with Lights Out.
   2. Your personal/business domain (can be anything, but should be unique so that the app's name doesn't conflict with an app with the same name in places like the Play store).
   3. Where are you storing your project? I recommend creating a folder for Android projects.
   4. Click Next.
-- Unless you have a specific use case, just use the default settings for Target Android Devices. Click Next.  
+- Unless you have a specific use case, just use the default settings for Target Android Devices. Click Next.
 ![](/assets/images/letsmakeandroidlogicpuzzle3.png)
-- We just need an empty activity for now, so click Next.  
+- We just need an empty activity for now, so click Next.
 ![](/assets/images/letsmakeandroidlogicpuzzle4.png)
-- I'll use the defaults for now. As apps get more complicated we start thinking of better names to organize everything. For now, keep the defaults and click Finish.  
+- I'll use the defaults for now. As apps get more complicated we start thinking of better names to organize everything. For now, keep the defaults and click Finish.
 ![](/assets/images/letsmakeandroidlogicpuzzle5.png)
-- Wait while android builds the project.  
+- Wait while android builds the project.
 ![](/assets/images/letsmakeandroidlogicpuzzle6.png)
-- Expand app/java/com.domain.appname and app/res/layout to find the MainActivity.java and activity_main.xml files to get started.  
+- Expand app/java/com.domain.appname and app/res/layout to find the MainActivity.java and activity_main.xml files to get started.
 ![](/assets/images/letsmakeandroidlogicpuzzle7.png)
 
 ## 2. Create a layout
@@ -40,29 +40,29 @@ As you might know already, there are a bazillion ways to do layouts, and I'm jus
 
 - Open the provided layout file activity_main.xml. They start you out with a single TextView inside a layout, but we'll completely replace that with our own layout.
 There are a few things to note here:
-1. The outer LinearLayout uses a vertical orientation, which means that each element directly inside of it will be placed on the screen from top to bottom. In this case, every inner LinearLayout represents one row of buttons from top to bottom.
-2. The outer LinearLayout has layout_gravity set to center, meaning the entire grid of buttons will be centered on the screen horizontally and vertically.
-3. The outer LinearLayout has layout_marginTop set to the width of a single button, meaning the entire grid will be shifted down from the center by one button width.
-4. The inner LinearLayouts (each row of buttons) have their orientation set to horizontal, meaning each element inside of them (each button) is placed left to right.
-5. We set the layout_width and layout_height of every button to the same value - buttonWidth - so that every button is a square.
-6. The button background is set to whatever color we assign to colorLightOff, which will be light gray.
-7. The button layout_margin is set to the value of buttonSpacing, which just separates each button by a little bit so they're not all right next to each other.
+1. The outer RelativeLayout uses a vertical orientation, which means that each element can be placed relative to the outer edges and relative to each other. In this case, every inner LinearLayout represents one row of buttons from top to bottom.
+2. The outer RelativeLayout has layout_gravity set to center_horizontal, meaning the entire grid of buttons will be centered on the screen horizontally.
+3. The inner LinearLayouts (each row of buttons) have their orientation set to horizontal, meaning each element inside of them (each button) is placed left to right.
+4. We set the layout_width and layout_height of every button to the same value - buttonWidth - so that every button is a square. We might change this later on so that buttons dynamically shrink or expand depending on screen size, but this method is a little easier for now.
+5. The button background is set to whatever color we assign to colorLightOff, which will be light gray.
+6. The button layout_margin is set to the value of buttonSpacing, which just separates each button by a little bit so they're not all right next to each other.
 
 We'll define the dimensions and colors next, so don't worry about any errors you see after pasting this into your layout.
 
 ~~~ xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_marginTop="@dimen/buttonWidth"
-    android:layout_gravity="center">
+    android:layout_gravity="center_horizontal">
 
     <LinearLayout
+        android:id="@+id/buttonRowA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@id/buttonRowB">
 
         <Button
             android:id="@+id/a0"
@@ -98,9 +98,11 @@ We'll define the dimensions and colors next, so don't worry about any errors you
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@id/buttonRowC">
 
         <Button
             android:id="@+id/b0"
@@ -136,9 +138,11 @@ We'll define the dimensions and colors next, so don't worry about any errors you
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@+id/buttonRowD">
 
         <Button
             android:id="@+id/c0"
@@ -174,9 +178,11 @@ We'll define the dimensions and colors next, so don't worry about any errors you
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_above="@+id/buttonRowE">
 
         <Button
             android:id="@+id/d0"
@@ -212,9 +218,12 @@ We'll define the dimensions and colors next, so don't worry about any errors you
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonRowE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp">
 
         <Button
             android:id="@+id/e0"
@@ -249,7 +258,7 @@ We'll define the dimensions and colors next, so don't worry about any errors you
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
 ~~~
 
 - You probably noticed that there are some values we just referenced that don't exist, so we need to create those. We need to define the buttonWidth and buttonSpacing dimensions and the colorLightOn/colorLightOff colors. Starting with the dimensions, right click on app->res->values, and click New->Values resource file. Name it dimensions and click OK.
@@ -260,7 +269,7 @@ We'll define the dimensions and colors next, so don't worry about any errors you
 ~~~ xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="buttonWidth">60dp</dimen>
+    <dimen name="buttonWidth">50dp</dimen>
     <dimen name="buttonSpacing">2dp</dimen>
 </resources>
 ~~~
