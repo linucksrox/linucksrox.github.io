@@ -15,3 +15,5 @@ I run two servers at home, FreeNAS for storing files over my network, and ESXi r
 - a random Linux distro using the lightweight LXDE which primarily runs Crashplan for backing up most data on my FreeNAS
 - Nginx reverse proxy - this sits in front of Nextcloud and Ampache
 - OpenVPN for external access into my network and security on public Wi-Fi networks
+- Wazo PBX combined with Voip.ms service, allowing me to use my phone as a SIP extension and make outgoing calls from my house. Without this it's difficult to make calls without going outside.
+- Prosody as a chat server using the XMPP protocol (paired with Conversations for Android). This is far more reliable than SMS and especially MMS.
