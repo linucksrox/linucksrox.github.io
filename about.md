@@ -3,11 +3,13 @@ layout: single
 author_profile: true
 ---
 
-I love learning. Although a majority of my work involves system administration tasks, I love finding ways to automate things with software and researching new technologies.
+There's not enough time to learn everything I want to know. At the same time most of my knowledge is not documented, so this blog exists for me to share my knowledge and help people understand things that I've already learned through experience.
+
+Aside from programming and other technology interests, I play the piano and really enjoy recording music. [Check out some piano music I've written on SoundCloud.](https://soundcloud.com/linucksrox)
 
 Currently I'm focused on learning Android development in my free time. I have some background in C++ and Java, so Android is a natural progression of those skills. I'll be interested in getting into Kotlin once I feel a little more comfortable with the basics of Android.
 
-I run two servers at home, FreeNAS for storing files over my network, and ESXi running about 10 VMs for various services.
+I manage two physical servers at home: FreeNAS for storing files over my network, and ESXi running about 10 VMs for various services.
 - pfSense firewall
 - bind DNS
 - Nextcloud using FreeNAS as the backend storage, supporting 6 users. Combine this with the Nextcloud app, and you have a nice picture backup system for free!
