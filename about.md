@@ -10,7 +10,7 @@ Highlights of My Experience
 
 Software Development
 ---
-Currently I'm focused on learning Android development in my free time. I've spent the most time learning and playing with C++ and Java, so Android is a natural progression of those skills. I'm writing all new code in Kotlin starting with chapter 24 (Nerd Launcher). These are two of my projects that I think are particularly cool:
+Currently I'm focused on learning Android development in my free time. I've spent the most time learning and playing with C++ and Java, so Android is a natural progression of those skills. I'm writing all new code in Kotlin starting with chapter 24 (Nerd Launcher) of the Android Big Nerd Ranch book 3rd Edition. These are two of my projects that I think are particularly cool:
 - [Textecutor](https://github.com/linucksrox/Textecutor) - Send a text message to someone you need to call, turning their ringer to full max volume (they just need the app installed and your phone number needs to be on their authorized list of people). This is a work in progress, but is usable in its current state.
 - [Lights Out](https://github.com/linucksrox/AndroidLogicPuzzle) - This is just a clone of the classic Tiger Electronics handheld game where you have to turn off all the lights. I'm particularly interested in creating an algorithm which can calculate the fewest number of possible moves to solve.
 
