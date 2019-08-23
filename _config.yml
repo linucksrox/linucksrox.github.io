@@ -11,11 +11,11 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Eric's Excellent Learning Blog"
+title                    : "Eric Daly's Blog"
 title_separator          : "-"
 name                     : "Eric Daly"
 description              : "Sharing what I know"
-url                      : "http://blog.dalydays.com"
+url                      : "https://blog.dalydays.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "linucksrox/linucksrox.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -194,6 +194,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-include-cache
   - jemoji
 
 # mimic GitHub Pages with --safe
