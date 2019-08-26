@@ -44,6 +44,9 @@ Now that you're working with Activities and Fragments, learn Navigation because 
 ### Data Binding ###
 Tie your data to your views directly in the XML layout file and stop worrying about manually handling data changes/updates/refreshes at different varying points in time (or forgetting to code in another refresh when you make changes to your app later on).
 
+### Live Data ###
+Live data is a way to make your data "observable" meaning you can listen for changes in the data and take action, without having to write a lot of code to get it all working. You basically just wrap normal data inside LiveData and it allows you to set up an observer (like a listener) so whenever the data changes that listener gets notified. This also works nicely with data binding so your screen gets updated when the data changes regardless of if the user caused the change or something else on the back end changed it.
+
 ### Coroutines ###
 This is something that will "unlock" your ability to move forward with other things such as databases and networking. Without background work off the Main thread, you will be unable to do many things, and even if you can do some things your app's performance can really suffer. From my experience, coroutines are a very straightforward way of doing background work which is both useful and necessary for different situations. Forget about AsyncTasks and loaders and everything else, coroutines are very easy to learn and you can get more complex over time as needed.
 
@@ -62,7 +65,7 @@ Other important concepts that I need to start practicing
 Testing is extremely important in production apps that need to be maintained and expanded over time. While there's some debate, test driven development is an excellent workflow for developing any software because of many side effects such as catching bugs early (make a change, test, test fails, you know what you just changed so it's easy to find the problem), catching regressions, and having complete and evolving documentation that always matches your production code (tests are good examples of how to call your functions). This isn't something I do at this point, but my goal is to use test driven development for any production grade development I do in the future.
 
 ### Networking ###
-Networking is something that is used constantly. Try to think of an app that is 100% functional without an internet connection. Going back to RecyclerView, networking is constantly used to download the data that is used in those lists. It's also used for storing online copies of data (Firebase) or other things like cloud sync. This is another concept though that requires knowledge of doing background work, so learn coroutines before getting too far into networking, or else your app is going to be uninstalled.
+Networking is something that is used constantly. Try to think of an app that is 100% functional without an internet connection. Just like RecyclerView, networking is used in many apps. It's also used for storing online copies of data (Firebase) or other things like cloud sync. This is another concept though that requires knowledge of doing background work, so learn coroutines before getting too far into networking, or else your app is going to be uninstalled.
 
 ### JSON Library ###
 This kind of goes along with networking, although you can certainly work with JSON data from a local database or flat file. But JSON tends to be the format of choice for consuming APIs, and they map nicely to data objects. Actually, you don't need to work directly with JSON, there are a bunch of libraries to make JSON mapping easier such as GSON and moshi. I think Google has been pointing people toward moshi lately, so that's what I'll be using when I get more into the API side of things.
