@@ -30,6 +30,7 @@ I manage two physical servers at home: FreeNAS for storing files over my network
 - Prosody as a chat server using the XMPP protocol (paired with Conversations for Android). This is far more reliable than SMS and especially MMS.
 - Gitlab for keeping track of small projects that I don't want to put on github
 - Docker in swarm mode for quickly spinning up test instances of new software that I'm trying out.
+  - I've been really interested in Traefik which they call an edge router, but I think of it as a dymanic reverse proxy which automatically creates routes when you spin up new services. Either way it's extremely flexible and nice to use, even better than Nginx!
 
 Music
 ---
