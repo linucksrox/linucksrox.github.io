@@ -20,7 +20,7 @@ System Administration
 I manage two physical servers at home: FreeNAS for storing files over my network, and ESXi running about 10 VMs for various services. On the back burner I have Proxmox in mind and I'm looking at Docker and Ansible to create more of an Infrastructure As Code to make updates/deployment easier later on (like if I need to rebuild my entire setup from a backup).
 - FreeNAS
 - pfSense firewall
-- bind DNS
+- bind DNS for local DNS resolution - I recently added wildcard resolution and pointed to the docker host for ease of deployment.
 - Nextcloud using FreeNAS as the backend storage, supporting 6 users. Combine this with the Nextcloud app, and you have a nice picture backup system for free!
 - Ampache music streaming server (using dsub on Android for a Pandora like experience with my personal music collection)
 - restic backup software which grabs a majority of my data shared from FreeNAS and sends it to Backblaze B2 (and encrypts/deduplicates it!). I have a series of scripts which are scheduled via cron to backup, check the backup, and prune old "expired" snapshots. I'm doing just over 1TB to the cloud currently for less than $6/month, at the expense of some manual monitoring/intervention and initial work into the scripts. Not bad!
@@ -29,8 +29,10 @@ I manage two physical servers at home: FreeNAS for storing files over my network
 - Wazo PBX combined with Voip.ms service, allowing me to use my phone as a SIP extension and make outgoing calls from my house. Without this it's difficult to make calls without going outside.
 - Prosody as a chat server using the XMPP protocol (paired with Conversations for Android). This is far more reliable than SMS and especially MMS.
 - Gitlab for keeping track of small projects that I don't want to put on github
-- Docker in swarm mode for quickly spinning up test instances of new software that I'm trying out.
-  - I've been really interested in Traefik which they call an edge router, but I think of it as a dymanic reverse proxy which automatically creates routes when you spin up new services. Either way it's extremely flexible and nice to use, even better than Nginx!
+- Docker in swarm mode for quickly spinning up new services even for testing.
+  - Traefik is awesome and does dynamic reverse proxying by just specifying labels on any Docker services you deploy. This connects to Let's Encrypt, uses DNS Challenge, and automatically renews a wildcard cert for this domain with no manual intervention!
+  - Bitwarden_rs for password management (still experimenting with this one), looks very promising!
+  - Jellyfin media server which is kind of like a personal Netflix, but can also be used with Kodi. Another promising piece of software!
 
 Music
 ---
