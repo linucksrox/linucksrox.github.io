@@ -3,9 +3,9 @@ layout: single
 author_profile: true
 ---
 
-There's not enough time to learn everything I want to know. At the same time most of what I do know is not documented, so this blog exists for me to share some knowledge and hopefully help others understand things that I've learned through experience.
+I'm always looking for new technology to experiment with and use. Over time I've added more and more systems to my server that I use every day (see below). I would rather do something myself even if it's easier or might work a little better to use something else. I use open source software whenever possible, and try to give back by sharing my experience and knowledge with other people on community forums like Nextcloud and reddit for "fake internet points" as one commenter said when I questioned why people downvote without commenting, but I digress.
 
-Highlights of My Experience
+What's Happening Right Now
 ===
 
 Software Development
@@ -17,10 +17,10 @@ Currently I'm focused on learning Android development. I've spent the most time 
 
 System Administration
 ---
-I manage two physical servers at home: FreeNAS for storing files over my network, and ESXi running about 10 VMs for various services. On the back burner I have Proxmox in mind and I'm looking at Docker and Ansible to create more of an Infrastructure As Code to make updates/deployment easier later on (like if I need to rebuild my entire setup from a backup).
-- FreeNAS
+Right now I manage two physical servers at home: FreeNAS for storing files over my network, and ESXi running about 10 VMs for various services. On the back burner I have Proxmox in mind and I'm looking at Docker and Ansible to create more of an Infrastructure As Code to make updates/deployment easier later on (like if I need to rebuild my entire setup from a backup).
+- FreeNAS (16GB RAM, 6 2TB disks in RAIDZ2, ~7TB usable storage capacity) on an older desktop with no ECC RAM ([but I've done my homework and I understand the risks!](https://jrs-s.net/2015/02/03/will-zfs-and-non-ecc-ram-kill-your-data/))
 - pfSense firewall
-- bind DNS for local DNS resolution - I recently added wildcard resolution and pointed to the docker host for ease of deployment.
+- bind DNS for local DNS resolution - wildcard resolution is nice for subdomains!
 - Nextcloud using FreeNAS as the backend storage, supporting 6 users. Combine this with the Nextcloud app, and you have a nice picture backup system for free!
 - Ampache music streaming server (using dsub on Android for a Pandora like experience with my personal music collection)
 - restic backup software which grabs a majority of my data shared from FreeNAS and sends it to Backblaze B2 (and encrypts/deduplicates it!). I have a series of scripts which are scheduled via cron to backup, check the backup, and prune old "expired" snapshots. I'm doing just over 1TB to the cloud currently for less than $6/month, at the expense of some manual monitoring/intervention and initial work into the scripts. Not bad!
@@ -29,10 +29,10 @@ I manage two physical servers at home: FreeNAS for storing files over my network
 - Wazo PBX combined with Voip.ms service, allowing me to use my phone as a SIP extension and make outgoing calls from my house. Without this it's difficult to make calls without going outside.
 - Prosody as a chat server using the XMPP protocol (paired with Conversations for Android). This is far more reliable than SMS and especially MMS.
 - Gitlab for keeping track of small projects that I don't want to put on github
-- Docker in swarm mode for quickly spinning up new services even for testing.
+- Docker in swarm mode for quickly spinning up new services.
   - Traefik is awesome and does dynamic reverse proxying by just specifying labels on any Docker services you deploy. This connects to Let's Encrypt, uses DNS Challenge, and automatically renews a wildcard cert for this domain with no manual intervention!
-  - Bitwarden_rs for password management (still experimenting with this one), looks very promising!
-  - Jellyfin media server which is kind of like a personal Netflix, but can also be used with Kodi. Another promising piece of software!
+  - Bitwarden_rs for password management, self hosted (alternative to LastPass, Dashlane, etc.)
+  - Jellyfin media server which is kind of like a personal Netflix, but can also be used with Kodi.
 
 Music
 ---
