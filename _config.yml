@@ -23,7 +23,7 @@ url                      : "https://blog.dalydays.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "linucksrox/linucksrox.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-github			 : [metadata]
+github                   : [metadata]
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
